@@ -1,0 +1,30 @@
+/* Layout */
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#list-root {
+    display: flex;
+    justify-content: space-around;
+}
+
+ul>li li {
+    display: none;
+}
+
+
+/* Other Style */
+
+#list-root,
+li {
+    padding: 1rem;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+}
+
+li:hover {
+    background-color: lightblue;
+}

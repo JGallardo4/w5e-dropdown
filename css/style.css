@@ -45,23 +45,24 @@ ul {
 }
 
 .tier-2-root>ul {
+    position: absolute;
+    top: -3px;
+    left: 100%;
     display: none;
     visibility: hidden;
     opacity: 0;
-    position: absolute;
-    left: 100%;
-    top: -3px;
+}
+
+.tier-2-root:hover>ul {
+    display: block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .tier-2-root>ul li {
-    position: absolute;
-    z-index: 2;
-}
-
-.tier-2-root:hover * {
-    visibility: visible;
-    opacity: 1;
-    display: block;
+    display: inline-block;
+    border-top-style: none;
+    border-bottom-style: none;
 }
 
 
@@ -80,7 +81,7 @@ li {
     background-color: white;
 }
 
-#list-root>li li {
+#list-root>li>ul>li {
     border-top-style: none;
     border-bottom-style: none;
 }
@@ -90,8 +91,17 @@ li {
 }
 
 .tier-2-root>ul li {
-    border-style: solid !important;
-    border-left-style: none !important;
+    border-top-style: none;
+    border-bottom-style: none;
+}
+
+.tier-2-root>ul li:first-of-type {
+    border-top-style: solid;
+    border-left-style: none;
+}
+
+.tier-2-root>ul li:last-of-type {
+    border-bottom-style: solid;
 }
 
 ul {
